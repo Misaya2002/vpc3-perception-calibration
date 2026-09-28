@@ -1,0 +1,931 @@
+{
+  "role": "native_selective_gate_development_only",
+  "model": "catboost",
+  "threshold": 0.1,
+  "model_file_sha256": "d56bcd870c69757cda992f48f0b979921dc6652ad22aeff66bd8cb162bbd1e54",
+  "feature_names": [
+    "intercept",
+    "expert_sam3_presence",
+    "expert_sam3_mask_color",
+    "expert_siglip2_sam3_crop_color",
+    "expert_count_anything",
+    "expert_grounded_2d_geometry",
+    "expert_ppocrv6_single_line",
+    "expert_qwen3_vl_8b",
+    "expert_ppocrv6_qwen3_verified",
+    "expert_qwen3_vl_32b_fp8",
+    "expert_ppocrv6_qwen3_32b_verified",
+    "expert_blip_vqa_base",
+    "answer_type_boolean",
+    "answer_type_color",
+    "answer_type_entity",
+    "answer_type_integer",
+    "answer_type_open_text",
+    "pair_sam3_presence_boolean",
+    "pair_sam3_presence_color",
+    "pair_sam3_presence_entity",
+    "pair_sam3_presence_integer",
+    "pair_sam3_presence_open_text",
+    "pair_sam3_mask_color_boolean",
+    "pair_sam3_mask_color_color",
+    "pair_sam3_mask_color_entity",
+    "pair_sam3_mask_color_integer",
+    "pair_sam3_mask_color_open_text",
+    "pair_siglip2_sam3_crop_color_boolean",
+    "pair_siglip2_sam3_crop_color_color",
+    "pair_siglip2_sam3_crop_color_entity",
+    "pair_siglip2_sam3_crop_color_integer",
+    "pair_siglip2_sam3_crop_color_open_text",
+    "pair_count_anything_boolean",
+    "pair_count_anything_color",
+    "pair_count_anything_entity",
+    "pair_count_anything_integer",
+    "pair_count_anything_open_text",
+    "pair_grounded_2d_geometry_boolean",
+    "pair_grounded_2d_geometry_color",
+    "pair_grounded_2d_geometry_entity",
+    "pair_grounded_2d_geometry_integer",
+    "pair_grounded_2d_geometry_open_text",
+    "pair_ppocrv6_single_line_boolean",
+    "pair_ppocrv6_single_line_color",
+    "pair_ppocrv6_single_line_entity",
+    "pair_ppocrv6_single_line_integer",
+    "pair_ppocrv6_single_line_open_text",
+    "pair_qwen3_vl_8b_boolean",
+    "pair_qwen3_vl_8b_color",
+    "pair_qwen3_vl_8b_entity",
+    "pair_qwen3_vl_8b_integer",
+    "pair_qwen3_vl_8b_open_text",
+    "pair_ppocrv6_qwen3_verified_boolean",
+    "pair_ppocrv6_qwen3_verified_color",
+    "pair_ppocrv6_qwen3_verified_entity",
+    "pair_ppocrv6_qwen3_verified_integer",
+    "pair_ppocrv6_qwen3_verified_open_text",
+    "pair_qwen3_vl_32b_fp8_boolean",
+    "pair_qwen3_vl_32b_fp8_color",
+    "pair_qwen3_vl_32b_fp8_entity",
+    "pair_qwen3_vl_32b_fp8_integer",
+    "pair_qwen3_vl_32b_fp8_open_text",
+    "pair_ppocrv6_qwen3_32b_verified_boolean",
+    "pair_ppocrv6_qwen3_32b_verified_color",
+    "pair_ppocrv6_qwen3_32b_verified_entity",
+    "pair_ppocrv6_qwen3_32b_verified_integer",
+    "pair_ppocrv6_qwen3_32b_verified_open_text",
+    "pair_blip_vqa_base_boolean",
+    "pair_blip_vqa_base_color",
+    "pair_blip_vqa_base_entity",
+    "pair_blip_vqa_base_integer",
+    "pair_blip_vqa_base_open_text",
+    "expert_score",
+    "raw_length",
+    "proposal_length",
+    "qualified_route",
+    "has_bbox",
+    "has_point_count",
+    "independent_agreement",
+    "independent_conflict",
+    "raw_yes",
+    "raw_no",
+    "candidate_yes",
+    "candidate_no",
+    "raw_number",
+    "candidate_number",
+    "number_gap",
+    "raw_color_black",
+    "raw_color_white",
+    "raw_color_gray",
+    "raw_color_red",
+    "raw_color_orange",
+    "raw_color_yellow",
+    "raw_color_green",
+    "raw_color_blue",
+    "raw_color_purple",
+    "raw_color_pink",
+    "raw_color_brown",
+    "candidate_color_black",
+    "candidate_color_white",
+    "candidate_color_gray",
+    "candidate_color_red",
+    "candidate_color_orange",
+    "candidate_color_yellow",
+    "candidate_color_green",
+    "candidate_color_blue",
+    "candidate_color_purple",
+    "candidate_color_pink",
+    "candidate_color_brown",
+    "evidence_margin",
+    "sam3_score",
+    "candidate_count",
+    "question_length",
+    "qwen_confidence_available",
+    "qwen_first_token_logprob",
+    "qwen_mean_six_logprob",
+    "qwen_yes_probability",
+    "qwen_rerun_matches"
+  ],
+  "harm_cost": 1.25,
+  "outer_folds": [
+    {
+      "fold": 0,
+      "model": "catboost",
+      "threshold": 0.1,
+      "train_proposals": 231,
+      "heldout_questions": 110,
+      "inner_scores": {
+        "ridge_1|0.0": [
+          -0.5,
+          12,
+          10
+        ],
+        "ridge_1|0.025": [
+          -1.5,
+          11,
+          10
+        ],
+        "ridge_1|0.05": [
+          -0.25,
+          11,
+          9
+        ],
+        "ridge_1|0.1": [
+          -0.25,
+          11,
+          9
+        ],
+        "ridge_1|0.2": [
+          1.5,
+          9,
+          6
+        ],
+        "ridge_10|0.0": [
+          -2.0,
+          8,
+          8
+        ],
+        "ridge_10|0.025": [
+          -2.0,
+          8,
+          8
+        ],
+        "ridge_10|0.05": [
+          -0.5,
+          7,
+          6
+        ],
+        "ridge_10|0.1": [
+          2.0,
+          7,
+          4
+        ],
+        "ridge_10|0.2": [
+          1.75,
+          3,
+          1
+        ],
+        "extra_trees|0.0": [
+          3.5,
+          11,
+          6
+        ],
+        "extra_trees|0.025": [
+          3.5,
+          11,
+          6
+        ],
+        "extra_trees|0.05": [
+          3.75,
+          10,
+          5
+        ],
+        "extra_trees|0.1": [
+          6.25,
+          10,
+          3
+        ],
+        "extra_trees|0.2": [
+          3.5,
+          6,
+          2
+        ],
+        "hist_gradient_boosting|0.0": [
+          3.75,
+          15,
+          9
+        ],
+        "hist_gradient_boosting|0.025": [
+          5.0,
+          15,
+          8
+        ],
+        "hist_gradient_boosting|0.05": [
+          4.0,
+          14,
+          8
+        ],
+        "hist_gradient_boosting|0.1": [
+          4.25,
+          13,
+          7
+        ],
+        "hist_gradient_boosting|0.2": [
+          3.5,
+          11,
+          6
+        ],
+        "catboost|0.0": [
+          6.5,
+          14,
+          6
+        ],
+        "catboost|0.025": [
+          6.75,
+          13,
+          5
+        ],
+        "catboost|0.05": [
+          5.75,
+          12,
+          5
+        ],
+        "catboost|0.1": [
+          7.25,
+          11,
+          3
+        ],
+        "catboost|0.2": [
+          6.5,
+          9,
+          2
+        ]
+      }
+    },
+    {
+      "fold": 1,
+      "model": "catboost",
+      "threshold": 0.1,
+      "train_proposals": 238,
+      "heldout_questions": 91,
+      "inner_scores": {
+        "ridge_1|0.0": [
+          -3.0,
+          12,
+          12
+        ],
+        "ridge_1|0.025": [
+          -3.0,
+          12,
+          12
+        ],
+        "ridge_1|0.05": [
+          -4.0,
+          11,
+          12
+        ],
+        "ridge_1|0.1": [
+          -2.75,
+          11,
+          11
+        ],
+        "ridge_1|0.2": [
+          2.5,
+          10,
+          6
+        ],
+        "ridge_10|0.0": [
+          -2.25,
+          9,
+          9
+        ],
+        "ridge_10|0.025": [
+          -3.0,
+          7,
+          8
+        ],
+        "ridge_10|0.05": [
+          -3.0,
+          7,
+          8
+        ],
+        "ridge_10|0.1": [
+          3.25,
+          7,
+          3
+        ],
+        "ridge_10|0.2": [
+          2.25,
+          6,
+          3
+        ],
+        "extra_trees|0.0": [
+          3.25,
+          12,
+          7
+        ],
+        "extra_trees|0.025": [
+          5.75,
+          12,
+          5
+        ],
+        "extra_trees|0.05": [
+          4.75,
+          11,
+          5
+        ],
+        "extra_trees|0.1": [
+          6.0,
+          11,
+          4
+        ],
+        "extra_trees|0.2": [
+          5.0,
+          10,
+          4
+        ],
+        "hist_gradient_boosting|0.0": [
+          4.75,
+          16,
+          9
+        ],
+        "hist_gradient_boosting|0.025": [
+          6.0,
+          16,
+          8
+        ],
+        "hist_gradient_boosting|0.05": [
+          5.0,
+          15,
+          8
+        ],
+        "hist_gradient_boosting|0.1": [
+          4.25,
+          13,
+          7
+        ],
+        "hist_gradient_boosting|0.2": [
+          5.0,
+          10,
+          4
+        ],
+        "catboost|0.0": [
+          6.5,
+          14,
+          6
+        ],
+        "catboost|0.025": [
+          5.5,
+          13,
+          6
+        ],
+        "catboost|0.05": [
+          5.5,
+          13,
+          6
+        ],
+        "catboost|0.1": [
+          7.0,
+          12,
+          4
+        ],
+        "catboost|0.2": [
+          6.25,
+          10,
+          3
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "model": "hist_gradient_boosting",
+      "threshold": 0.025,
+      "train_proposals": 220,
+      "heldout_questions": 100,
+      "inner_scores": {
+        "ridge_1|0.0": [
+          0.5,
+          13,
+          10
+        ],
+        "ridge_1|0.025": [
+          4.25,
+          13,
+          7
+        ],
+        "ridge_1|0.05": [
+          4.5,
+          12,
+          6
+        ],
+        "ridge_1|0.1": [
+          2.5,
+          10,
+          6
+        ],
+        "ridge_1|0.2": [
+          2.75,
+          9,
+          5
+        ],
+        "ridge_10|0.0": [
+          -0.5,
+          7,
+          6
+        ],
+        "ridge_10|0.025": [
+          -2.5,
+          5,
+          6
+        ],
+        "ridge_10|0.05": [
+          -2.5,
+          5,
+          6
+        ],
+        "ridge_10|0.1": [
+          -2.5,
+          5,
+          6
+        ],
+        "ridge_10|0.2": [
+          2.75,
+          4,
+          1
+        ],
+        "extra_trees|0.0": [
+          1.75,
+          8,
+          5
+        ],
+        "extra_trees|0.025": [
+          1.75,
+          8,
+          5
+        ],
+        "extra_trees|0.05": [
+          1.75,
+          8,
+          5
+        ],
+        "extra_trees|0.1": [
+          1.75,
+          8,
+          5
+        ],
+        "extra_trees|0.2": [
+          3.25,
+          7,
+          3
+        ],
+        "hist_gradient_boosting|0.0": [
+          4.25,
+          13,
+          7
+        ],
+        "hist_gradient_boosting|0.025": [
+          5.5,
+          13,
+          6
+        ],
+        "hist_gradient_boosting|0.05": [
+          4.5,
+          12,
+          6
+        ],
+        "hist_gradient_boosting|0.1": [
+          3.5,
+          11,
+          6
+        ],
+        "hist_gradient_boosting|0.2": [
+          4.0,
+          9,
+          4
+        ],
+        "catboost|0.0": [
+          3.25,
+          12,
+          7
+        ],
+        "catboost|0.025": [
+          3.5,
+          11,
+          6
+        ],
+        "catboost|0.05": [
+          3.75,
+          10,
+          5
+        ],
+        "catboost|0.1": [
+          5.25,
+          9,
+          3
+        ],
+        "catboost|0.2": [
+          3.25,
+          7,
+          3
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "model": "catboost",
+      "threshold": 0.05,
+      "train_proposals": 240,
+      "heldout_questions": 92,
+      "inner_scores": {
+        "ridge_1|0.0": [
+          -7.75,
+          6,
+          11
+        ],
+        "ridge_1|0.025": [
+          -7.75,
+          6,
+          11
+        ],
+        "ridge_1|0.05": [
+          -7.75,
+          6,
+          11
+        ],
+        "ridge_1|0.1": [
+          -5.0,
+          5,
+          8
+        ],
+        "ridge_1|0.2": [
+          -2.5,
+          5,
+          6
+        ],
+        "ridge_10|0.0": [
+          -5.75,
+          3,
+          7
+        ],
+        "ridge_10|0.025": [
+          -2.0,
+          3,
+          4
+        ],
+        "ridge_10|0.05": [
+          -0.75,
+          3,
+          3
+        ],
+        "ridge_10|0.1": [
+          -0.75,
+          3,
+          3
+        ],
+        "ridge_10|0.2": [
+          -2.75,
+          1,
+          3
+        ],
+        "extra_trees|0.0": [
+          -2.0,
+          3,
+          4
+        ],
+        "extra_trees|0.025": [
+          -3.0,
+          2,
+          4
+        ],
+        "extra_trees|0.05": [
+          -3.0,
+          2,
+          4
+        ],
+        "extra_trees|0.1": [
+          -3.0,
+          2,
+          4
+        ],
+        "extra_trees|0.2": [
+          -2.75,
+          1,
+          3
+        ],
+        "hist_gradient_boosting|0.0": [
+          3.0,
+          13,
+          8
+        ],
+        "hist_gradient_boosting|0.025": [
+          3.25,
+          12,
+          7
+        ],
+        "hist_gradient_boosting|0.05": [
+          4.5,
+          12,
+          6
+        ],
+        "hist_gradient_boosting|0.1": [
+          6.0,
+          11,
+          4
+        ],
+        "hist_gradient_boosting|0.2": [
+          2.25,
+          6,
+          3
+        ],
+        "catboost|0.0": [
+          3.75,
+          10,
+          5
+        ],
+        "catboost|0.025": [
+          5.0,
+          10,
+          4
+        ],
+        "catboost|0.05": [
+          7.5,
+          10,
+          2
+        ],
+        "catboost|0.1": [
+          6.5,
+          9,
+          2
+        ],
+        "catboost|0.2": [
+          4.75,
+          6,
+          1
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "model": "catboost",
+      "threshold": 0.05,
+      "train_proposals": 223,
+      "heldout_questions": 107,
+      "inner_scores": {
+        "ridge_1|0.0": [
+          -4.25,
+          12,
+          13
+        ],
+        "ridge_1|0.025": [
+          -3.0,
+          12,
+          12
+        ],
+        "ridge_1|0.05": [
+          -0.5,
+          12,
+          10
+        ],
+        "ridge_1|0.1": [
+          -2.5,
+          10,
+          10
+        ],
+        "ridge_1|0.2": [
+          -1.0,
+          9,
+          8
+        ],
+        "ridge_10|0.0": [
+          -2.25,
+          9,
+          9
+        ],
+        "ridge_10|0.025": [
+          1.5,
+          9,
+          6
+        ],
+        "ridge_10|0.05": [
+          1.5,
+          9,
+          6
+        ],
+        "ridge_10|0.1": [
+          2.0,
+          7,
+          4
+        ],
+        "ridge_10|0.2": [
+          3.75,
+          5,
+          1
+        ],
+        "extra_trees|0.0": [
+          1.0,
+          11,
+          8
+        ],
+        "extra_trees|0.025": [
+          2.5,
+          10,
+          6
+        ],
+        "extra_trees|0.05": [
+          3.75,
+          10,
+          5
+        ],
+        "extra_trees|0.1": [
+          5.0,
+          10,
+          4
+        ],
+        "extra_trees|0.2": [
+          7.75,
+          9,
+          1
+        ],
+        "hist_gradient_boosting|0.0": [
+          -2.25,
+          14,
+          13
+        ],
+        "hist_gradient_boosting|0.025": [
+          -2.0,
+          13,
+          12
+        ],
+        "hist_gradient_boosting|0.05": [
+          -3.0,
+          12,
+          12
+        ],
+        "hist_gradient_boosting|0.1": [
+          3.25,
+          12,
+          7
+        ],
+        "hist_gradient_boosting|0.2": [
+          5.5,
+          8,
+          2
+        ],
+        "catboost|0.0": [
+          6.75,
+          13,
+          5
+        ],
+        "catboost|0.025": [
+          8.0,
+          13,
+          4
+        ],
+        "catboost|0.05": [
+          9.25,
+          13,
+          3
+        ],
+        "catboost|0.1": [
+          6.5,
+          9,
+          2
+        ],
+        "catboost|0.2": [
+          6.75,
+          8,
+          1
+        ]
+      }
+    }
+  ],
+  "final_inner_scores": {
+    "ridge_1|0.0": [
+      -2.25,
+      14,
+      13
+    ],
+    "ridge_1|0.025": [
+      -2.25,
+      14,
+      13
+    ],
+    "ridge_1|0.05": [
+      -2.0,
+      13,
+      12
+    ],
+    "ridge_1|0.1": [
+      -0.75,
+      13,
+      11
+    ],
+    "ridge_1|0.2": [
+      3.5,
+      11,
+      6
+    ],
+    "ridge_10|0.0": [
+      -3.25,
+      8,
+      9
+    ],
+    "ridge_10|0.025": [
+      -4.25,
+      7,
+      9
+    ],
+    "ridge_10|0.05": [
+      -3.0,
+      7,
+      8
+    ],
+    "ridge_10|0.1": [
+      -1.5,
+      6,
+      6
+    ],
+    "ridge_10|0.2": [
+      2.25,
+      6,
+      3
+    ],
+    "extra_trees|0.0": [
+      -1.0,
+      9,
+      8
+    ],
+    "extra_trees|0.025": [
+      0.25,
+      9,
+      7
+    ],
+    "extra_trees|0.05": [
+      1.5,
+      9,
+      6
+    ],
+    "extra_trees|0.1": [
+      3.0,
+      8,
+      4
+    ],
+    "extra_trees|0.2": [
+      3.0,
+      8,
+      4
+    ],
+    "hist_gradient_boosting|0.0": [
+      6.25,
+      20,
+      11
+    ],
+    "hist_gradient_boosting|0.025": [
+      7.5,
+      20,
+      10
+    ],
+    "hist_gradient_boosting|0.05": [
+      5.75,
+      17,
+      9
+    ],
+    "hist_gradient_boosting|0.1": [
+      6.0,
+      16,
+      8
+    ],
+    "hist_gradient_boosting|0.2": [
+      5.5,
+      13,
+      6
+    ],
+    "catboost|0.0": [
+      9.5,
+      17,
+      6
+    ],
+    "catboost|0.025": [
+      9.5,
+      17,
+      6
+    ],
+    "catboost|0.05": [
+      8.5,
+      16,
+      6
+    ],
+    "catboost|0.1": [
+      10.0,
+      15,
+      4
+    ],
+    "catboost|0.2": [
+      6.0,
+      11,
+      4
+    ]
+  },
+  "question_only_sha256": "59889e237cfd0c9b14d44ae45bd28addf152b406033df817b0ad7d29bd9cbc80",
+  "development_labels_sha256": "b6f963eb965407669c03d78563f402fabee9d6ee728b702011eea61c8f708314",
+  "proposals_sha256": "a105cdc8ff46af7d4d498ee0b0fc653b870e0a32448f6e6c06673d8fc3b855d4",
+  "confidence_sha256": null,
+  "warning": "No confirmation labels used; freeze only after development review."
+}

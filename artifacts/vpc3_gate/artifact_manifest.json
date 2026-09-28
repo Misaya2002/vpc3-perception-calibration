@@ -1,0 +1,26 @@
+{
+  "role": "vpc3_frozen_native_answer_gate",
+  "training_split": "500-question five-category development set",
+  "model": "CatBoostRegressor",
+  "threshold": 0.1,
+  "feature_count": 118,
+  "proposal_support": {
+    "qwen3_vl_8b": 151,
+    "sam3_presence": 4,
+    "sam3_mask_color": 28,
+    "siglip2_sam3_crop_color": 27,
+    "grounded_2d_geometry": 17,
+    "count_anything": 51,
+    "ppocrv6_single_line": 5,
+    "ppocrv6_qwen3_verified": 5
+  },
+  "python": "3.10.20",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.7.2",
+  "joblib": "1.5.3",
+  "catboost": "1.2.10",
+  "sha256": {
+    "gate_model.json": "f2395319fe1ccefb1183bc0df453812a70c23f53b76158f52511e470dc7a04ab",
+    "gate_model.joblib": "d56bcd870c69757cda992f48f0b979921dc6652ad22aeff66bd8cb162bbd1e54"
+  }
+}
